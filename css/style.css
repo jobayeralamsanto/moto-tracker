@@ -1081,7 +1081,7 @@ input#checkboxLabel:checked ~ .box span {
   --tw-bg-opacity: 0.75;
 }
 .fill-current {
-  fill: currentColor;
+  fill: rgb(21 168 109 / 56%);
 }
 .stroke-current {
   stroke: currentColor;
