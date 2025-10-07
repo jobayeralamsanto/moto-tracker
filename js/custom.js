@@ -66,14 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // ========= Submenu
-  const submenuItems = document.querySelectorAll(".submenu-item");
-  submenuItems.forEach(function (el) {
-    el.querySelector("a").addEventListener("click", function () {
-      el.querySelector(".submenu").classList.toggle("hidden");
-    });
-  });
-
   // ========= FAQ Accordion
   const faqs = document.querySelectorAll(".single-faq");
   faqs.forEach(function (el) {
@@ -146,4 +138,94 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector(".back-to-top").onclick = function () {
     scrollTo(document.documentElement);
   };
+
+  $(".video-carousel").owlCarousel({
+    margin: 0,
+    responsive: {
+      0: {
+        nav: false,
+        dots: true,
+        items: 1,
+      },
+
+      768: {
+        nav: true,
+        dots: false,
+        items: 1,
+      },
+    },
+  });
+
+  $(".client-carousel").owlCarousel({
+    margin: 0,
+    responsive: {
+      0: {
+        nav: false,
+        dots: true,
+        items: 2,
+      },
+      576: {
+        nav: false,
+        dots: true,
+        items: 3,
+      },
+      800: {
+        nav: true,
+        dots: false,
+        items: 4,
+      },
+      1200: {
+        nav: true,
+        dots: false,
+        items: 5,
+      },
+      1400: {
+        nav: true,
+        dots: false,
+        items: 6,
+      },
+    },
+  });
+  $(".testimonial-carousel").owlCarousel({
+    margin: 0,
+    responsive: {
+      0: {
+        nav: false,
+        dots: true,
+        items: 1,
+      },
+
+      768: {
+        nav: true,
+        dots: false,
+        items: 2,
+      },
+      1200: {
+        nav: true,
+        dots: false,
+        items: 3,
+      },
+    },
+  });
+  $(".pricing-carousel").owlCarousel({
+    margin: 0,
+    responsive: {
+      0: {
+        nav: false,
+        dots: true,
+        items: 1,
+      },
+
+      768: {
+        nav: true,
+        dots: false,
+        items: 2,
+      },
+      1200: {
+        nav: true,
+        dots: false,
+        items: 3,
+      },
+    },
+  });
 });
