@@ -158,30 +158,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
   $(".client-carousel").owlCarousel({
     margin: 0,
+    autoplay: true,
+    loop: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    nav: false,
+    dots: true,
     responsive: {
       0: {
-        nav: false,
-        dots: true,
         items: 2,
       },
       576: {
-        nav: false,
-        dots: true,
         items: 3,
       },
       800: {
-        nav: true,
-        dots: false,
         items: 4,
       },
       1200: {
-        nav: true,
-        dots: false,
         items: 5,
       },
       1400: {
-        nav: true,
-        dots: false,
         items: 6,
       },
     },
@@ -225,6 +221,36 @@ document.addEventListener("DOMContentLoaded", function () {
         nav: true,
         dots: false,
         items: 3,
+      },
+    },
+  });
+  $(".partner-carousel").owlCarousel({
+    margin: 0,
+    responsive: {
+      0: {
+        nav: false,
+        dots: true,
+        items: 2,
+      },
+      576: {
+        nav: false,
+        dots: true,
+        items: 3,
+      },
+      800: {
+        nav: true,
+        dots: false,
+        items: 4,
+      },
+      1200: {
+        nav: true,
+        dots: false,
+        items: 5,
+      },
+      1400: {
+        nav: true,
+        dots: false,
+        items: 6,
       },
     },
   });

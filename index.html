@@ -70,6 +70,7 @@
             </nav>
           </div>
           <div class="flex justify-end items-center pr-16 lg:pr-0">
+            <a href="#" class="hidden md:block text-base font-bold text-dark dark:text-white hover:opacity-70 py-3 px-7"> Log In</a>
             <a href="#" class="hidden md:block text-base font-bold text-white bg-primary py-3 px-8 md:px-9 lg:px-6 xl:px-9 hover:shadow-signUp hover:bg-opacity-90 rounded-md transition ease-in-up duration-300"> Report </a>
             <div>
               <label for="darkToggler" class="cursor-pointer w-9 h-9 md:w-14 md:h-14 rounded-full flex items-center justify-center bg-gray-2 dark:bg-dark-bg text-black dark:text-white">
@@ -639,7 +640,7 @@
 
         <div class="flex flex-wrap mx-[-16px]">
           <div class="w-full md:w-6/12 lg:w-4/12 xl:w-3/12 px-4 text-center">
-            <div class="mb-[40px] md:mb-[50px] xl:mb-[70px] wow fadeInUp" data-wow-delay=".15s">
+            <div class="mb-[40px] md:mb-[50px] xl:mb-[70px] wow fadeInUp" data-wow-delay=".2s">
               <div class="w-[70px] h-[70px] flex items-center justify-center mx-auto rounded-md bg-primary bg-opacity-10 mb-[20px] md:mb-[40px] text-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-current-location">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -652,9 +653,47 @@
                 </svg>
               </div>
               <h3 class="font-bold text-black dark:text-white text-xl sm:text-2xl lg:text-xl xl:text-2xl mb-5">Basic GPS Tracker</h3>
-              <p class="text-body-color text-base leading-relaxed font-medium pr-[10px]">Track your vehicles live on the map with pinpoint accuracy. Whether it’s a single car or an entire fleet, you’ll always know where your vehicles are.</p>
+              <!-- Short visible description -->
+              <div class="summary text-body-color text-base leading-relaxed font-medium pr-[10px] line-clamp-3 overflow-hidden text-ellipsis">A basic GPS device is a type of Global Positioning System (GPS) receiver that is designed to determine and display its geographical location (latitude, longitude, and often altitude) anywhere on Earth.</div>
+              <!-- Full hidden content -->
+              <div class="full-content hidden text-left">
+                <p>A basic GPS device is a type of Global Positioning System (GPS) receiver that is designed to determine and display its geographical location (latitude, longitude, and often altitude) anywhere on Earth.</p>
+                <p>It works by receiving and analyzing radio signals from a constellation of U.S. government satellites orbiting the Earth</p>
+                <p class="text-bold">Service –</p>
+                <ul class="list-disc list-inside mt-2">
+                  <li>Live Tracking</li>
+                  <li>Live Speed</li>
+                  <li>Trip Report</li>
+                  <li>Travel History</li>
+                  <li>Engine On/Off Alert</li>
+                  <li>Engine Lock/Unlock</li>
+                  <li>Vehicle Expenses Management</li>
+                  <li>Built-in Battery Backup</li>
+                  <li>Strong Cellular Network</li>
+                  <li>Geo-Fence Report</li>
+                  <li>Destination Alert</li>
+                  <li>Device Removal Alert</li>
+                  <li>Daily Summary SMS</li>
+                  <li>Over Speed</li>
+                  <li>150 + Reports</li>
+                  <li>Many Type of Alert</li>
+                </ul>
+                <p class="mt-2">Perfect for fleet management or personal tracking, Route Replay gives you deep insights into driving behavior.</p>
+              </div>
+              <!-- See more button -->
+              <button class="see-more text-primary font-semibold pt-7 hover:underline">See more</button>
             </div>
           </div>
+
+          <!-- Modal -->
+          <div id="modal" class="fixed inset-0 hidden bg-black bg-opacity-75 flex items-center justify-center z-50">
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 w-[90%] max-w-xl relative max-h-[80vh] overflow-y-auto">
+              <button id="closeModal" class="absolute top-2 right-3 text-gray-500 text-xl">&times;</button>
+              <h3 class="font-bold text-xl mb-4 text-black">Basic GPS Tracker</h3>
+              <div id="modalContent" class="text-gray-700 dark:text-gray-300 leading-relaxed"></div>
+            </div>
+          </div>
+
           <div class="w-full md:w-6/12 lg:w-4/12 xl:w-3/12 px-4 text-center">
             <div class="mb-[40px] md:mb-[50px] xl:mb-[70px] wow fadeInUp" data-wow-delay=".2s">
               <div class="w-[70px] h-[70px] flex items-center justify-center mx-auto rounded-md bg-primary bg-opacity-10 mb-[20px] md:mb-[40px] text-primary">
@@ -668,7 +707,7 @@
                 </svg>
               </div>
               <h3 class="font-bold text-black dark:text-white text-xl sm:text-2xl lg:text-xl xl:text-2xl mb-5">AI DASH CAM</h3>
-              <p class="text-body-color text-base leading-relaxed font-medium pr-[10px]">Keep drivers safe with instant speed alerts. Get notified when speed limits are crossed, helping to prevent accidents and improve driving habits.</p>
+              <p class="summary text-body-color text-base leading-relaxed font-medium pr-[10px] line-clamp-3 overflow-hidden text-ellipsis">Keep drivers safe with instant speed alerts. Get notified when speed limits are crossed, helping to prevent accidents and improve driving habits.</p>
             </div>
           </div>
           <div class="w-full md:w-6/12 lg:w-4/12 xl:w-3/12 px-4 text-center">
@@ -684,7 +723,7 @@
                 </svg>
               </div>
               <h3 class="font-bold text-black dark:text-white text-xl sm:text-2xl lg:text-xl xl:text-2xl mb-5">Fuel Management Solution</h3>
-              <p class="text-body-color text-base leading-relaxed font-medium pr-[10px]">Monitor fuel consumption in real time to reduce costs and detect misuse. Get accurate reports on mileage, fuel usage, and efficiency.</p>
+              <p class="summary text-body-color text-base leading-relaxed font-medium pr-[10px] line-clamp-3 overflow-hidden text-ellipsis">Monitor fuel consumption in real time to reduce costs and detect misuse. Get accurate reports on mileage, fuel usage, and efficiency.</p>
             </div>
           </div>
           <div class="w-full md:w-6/12 lg:w-4/12 xl:w-3/12 px-4 text-center">
@@ -696,31 +735,22 @@
                   <path d="M10 9l4 0" />
                 </svg>
               </div>
-              <h3 class="font-bold text-black dark:text-white text-xl sm:text-2xl lg:text-xl xl:text-2xl mb-5">Vehicle Tempereture Management Solution</h3>
-              <p class="text-body-color text-base leading-relaxed font-medium pr-[10px]">Stay informed about how long vehicles remain parked. Manage idle time, improve productivity, and keep your business on the move.</p>
+              <h3 class="font-bold text-black dark:text-white text-xl sm:text-2xl lg:text-xl xl:text-2xl mb-5">Vehicle & Cold Storatge Tempereture Management Solution</h3>
+              <p class="summary text-body-color text-base leading-relaxed font-medium pr-[10px] line-clamp-3 overflow-hidden text-ellipsis">Stay informed about how long vehicles remain parked. Manage idle time, improve productivity, and keep your business on the move.</p>
             </div>
           </div>
           <div class="w-full md:w-6/12 lg:w-4/12 xl:w-3/12 px-4 text-center">
             <div class="mb-[40px] md:mb-[50px] xl:mb-[70px] wow fadeInUp" data-wow-delay=".15s">
               <div class="w-[70px] h-[70px] flex items-center justify-center mx-auto rounded-md bg-primary bg-opacity-10 mb-[20px] md:mb-[40px] text-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-snowflake">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-device-mobile">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M10 4l2 1l2 -1" />
-                  <path d="M12 2v6.5l3 1.72" />
-                  <path d="M17.928 6.268l.134 2.232l1.866 1.232" />
-                  <path d="M20.66 7l-5.629 3.25l.01 3.458" />
-                  <path d="M19.928 14.268l-1.866 1.232l-.134 2.232" />
-                  <path d="M20.66 17l-5.629 -3.25l-2.99 1.738" />
-                  <path d="M14 20l-2 -1l-2 1" />
-                  <path d="M12 22v-6.5l-3 -1.72" />
-                  <path d="M6.072 17.732l-.134 -2.232l-1.866 -1.232" />
-                  <path d="M3.34 17l5.629 -3.25l-.01 -3.458" />
-                  <path d="M4.072 9.732l1.866 -1.232l.134 -2.232" />
-                  <path d="M3.34 7l5.629 3.25l2.99 -1.738" />
+                  <path d="M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14z" />
+                  <path d="M11 4h2" />
+                  <path d="M12 17v.01" />
                 </svg>
               </div>
-              <h3 class="font-bold text-black dark:text-white text-xl sm:text-2xl lg:text-xl xl:text-2xl mb-5">Cold Storatge monitoring and control</h3>
-              <p class="text-body-color text-base leading-relaxed font-medium pr-[10px]">Our dedicated support team is available around the clock to assist you. Anytime you face an issue, we’re just a call away.</p>
+              <h3 class="font-bold text-black dark:text-white text-xl sm:text-2xl lg:text-xl xl:text-2xl mb-5">Phone Control</h3>
+              <p class="summary text-body-color text-base leading-relaxed font-medium pr-[10px] line-clamp-3 overflow-hidden text-ellipsis">Our dedicated support team is available around the clock to assist you. Anytime you face an issue, we’re just a call away.</p>
             </div>
           </div>
           <div class="w-full md:w-6/12 lg:w-4/12 xl:w-3/12 px-4 text-center">
@@ -734,9 +764,10 @@
                 </svg>
               </div>
               <h3 class="font-bold text-black dark:text-white text-xl sm:text-2xl lg:text-xl xl:text-2xl mb-5">Door Management Solution</h3>
-              <p class="text-body-color text-base leading-relaxed font-medium pr-[10px]">Looking to track the path of your vehicle?With Route Replay, you can replay the routes your car has travelled over in the past. You’ll be able to see the exact path your car took.</p>
+              <p class="summary text-body-color text-base leading-relaxed font-medium pr-[10px] line-clamp-3 overflow-hidden text-ellipsis">Looking to track the path of your vehicle?With Route Replay, you can replay the routes your car has travelled over in the past. You’ll be able to see the exact path your car took.</p>
             </div>
           </div>
+
           <div class="w-full md:w-6/12 lg:w-4/12 xl:w-3/12 px-4 text-center">
             <div class="mb-[40px] md:mb-[50px] xl:mb-[70px] wow fadeInUp" data-wow-delay=".2s">
               <div class="w-[70px] h-[70px] flex items-center justify-center mx-auto rounded-md bg-primary bg-opacity-10 mb-[20px] md:mb-[40px] text-primary">
@@ -749,7 +780,7 @@
                 </svg>
               </div>
               <h3 class="font-bold text-black dark:text-white text-xl sm:text-2xl lg:text-xl xl:text-2xl mb-5">LOAD Management Solution</h3>
-              <p class="text-body-color text-base leading-relaxed font-medium pr-[10px]">Looking to track the path of your vehicle?With Route Replay, you can replay the routes your car has travelled over in the past. You’ll be able to see the exact path your car took.</p>
+              <p class="summary text-body-color text-base leading-relaxed font-medium pr-[10px] line-clamp-3 overflow-hidden text-ellipsis">Looking to track the path of your vehicle?With Route Replay, you can replay the routes your car has travelled over in the past. You’ll be able to see the exact path your car took.</p>
             </div>
           </div>
           <div class="w-full md:w-6/12 lg:w-4/12 xl:w-3/12 px-4 text-center">
@@ -768,7 +799,7 @@
                 </svg>
               </div>
               <h3 class="font-bold text-black dark:text-white text-xl sm:text-2xl lg:text-xl xl:text-2xl mb-5">Inteligent Transport Management System</h3>
-              <p class="text-body-color text-base leading-relaxed font-medium pr-[10px]">Looking to track the path of your vehicle?With Route Replay, you can replay the routes your car has travelled over in the past. You’ll be able to see the exact path your car took.</p>
+              <p class="summary text-body-color text-base leading-relaxed font-medium pr-[10px] line-clamp-3 overflow-hidden text-ellipsis">Looking to track the path of your vehicle?With Route Replay, you can replay the routes your car has travelled over in the past. You’ll be able to see the exact path your car took.</p>
             </div>
           </div>
           <div class="w-full md:w-6/12 lg:w-4/12 xl:w-3/12 px-4 text-center">
@@ -784,7 +815,7 @@
                 </svg>
               </div>
               <h3 class="font-bold text-black dark:text-white text-xl sm:text-2xl lg:text-xl xl:text-2xl mb-5">Vehicle Health Monitor</h3>
-              <p class="text-body-color text-base leading-relaxed font-medium pr-[10px]">Looking to track the path of your vehicle?With Route Replay, you can replay the routes your car has travelled over in the past. You’ll be able to see the exact path your car took.</p>
+              <p class="summary text-body-color text-base leading-relaxed font-medium pr-[10px] line-clamp-3 overflow-hidden text-ellipsis">Looking to track the path of your vehicle?With Route Replay, you can replay the routes your car has travelled over in the past. You’ll be able to see the exact path your car took.</p>
             </div>
           </div>
           <div class="w-full md:w-6/12 lg:w-4/12 xl:w-3/12 px-4 text-center">
@@ -798,8 +829,21 @@
                   <path d="M3 13a20 20 0 0 0 18 0" />
                 </svg>
               </div>
-              <h3 class="font-bold text-black dark:text-white text-xl sm:text-2xl lg:text-xl xl:text-2xl mb-5">Hybride PLC</h3>
-              <p class="text-body-color text-base leading-relaxed font-medium pr-[10px]">Looking to track the path of your vehicle?With Route Replay, you can replay the routes your car has travelled over in the past. You’ll be able to see the exact path your car took.</p>
+              <h3 class="font-bold text-black dark:text-white text-xl sm:text-2xl lg:text-xl xl:text-2xl mb-5">LittleSpark Hybride PLC</h3>
+              <p class="summary text-body-color text-base leading-relaxed font-medium pr-[10px] line-clamp-3 overflow-hidden text-ellipsis">Looking to track the path of your vehicle?With Route Replay, you can replay the routes your car has travelled over in the past. You’ll be able to see the exact path your car took.</p>
+            </div>
+          </div>
+          <div class="w-full md:w-6/12 lg:w-4/12 xl:w-3/12 px-4 text-center">
+            <div class="mb-[40px] md:mb-[50px] xl:mb-[70px] wow fadeInUp" data-wow-delay=".2s">
+              <div class="w-[70px] h-[70px] flex items-center justify-center mx-auto rounded-md bg-primary bg-opacity-10 mb-[20px] md:mb-[40px] text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-gps">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                  <path d="M12 17l-1 -4l-4 -1l9 -4z" />
+                </svg>
+              </div>
+              <h3 class="font-bold text-black dark:text-white text-xl sm:text-2xl lg:text-xl xl:text-2xl mb-5">White Label GPS Software</h3>
+              <p class="summary text-body-color text-base leading-relaxed font-medium pr-[10px] line-clamp-3 overflow-hidden text-ellipsis">Looking to track the path of your vehicle?With Route Replay, you can replay the routes your car has travelled over in the past. You’ll be able to see the exact path your car took.</p>
             </div>
           </div>
         </div>
@@ -2187,7 +2231,7 @@
           <div class="bg-primary bg-opacity-[3%] dark:bg-primary dark:bg-opacity-5 rounded-md py-8 px-8 sm:px-10 md:py-[40px] md:px-[50px] xl:p-[50px] 2xl:py-[60px] 2xl:px-[70px] wow fadeInUp" data-wow-delay=".1s">
             <h2 class="text-black dark:text-white font-bold text-center text-3xl sm:text-4xl md:text-[45px] mb-9">GPS Device <span class="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">Manufacturer Partners</span></h2>
 
-            <div class="client-carousel categorie-carousel owl-carousel owl-theme">
+            <div class="partner-carousel categorie-carousel owl-carousel owl-theme">
               <a href="#" target="_blank" rel="nofollow noreferrer" class="flex items-center justify-center mx-3 sm:mx-4 xl:mx-6 py-[15px]">
                 <img src="./img/manufacturer/Device-partner-logo-11.png.webp" alt="client logo" />
               </a>
@@ -2529,5 +2573,23 @@
     <script src="./plugin/glightbox/glightbox.min.js"></script>
     <script src="./plugin/wow/wow.js"></script>
     <script src="./js/custom.js"></script>
+    <script>
+      const modal = document.getElementById("modal");
+      const modalContent = document.getElementById("modalContent");
+      const closeModal = document.getElementById("closeModal");
+
+      document.querySelectorAll(".see-more").forEach((button) => {
+        button.addEventListener("click", () => {
+          const fullDiv = button.parentElement.querySelector(".full-content");
+          modalContent.innerHTML = fullDiv.innerHTML; // copies full HTML
+          modal.classList.remove("hidden");
+        });
+      });
+
+      closeModal.addEventListener("click", () => modal.classList.add("hidden"));
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) modal.classList.add("hidden");
+      });
+    </script>
   </body>
 </html>
