@@ -160,10 +160,13 @@ document.addEventListener("DOMContentLoaded", function () {
     margin: 0,
     autoplay: true,
     loop: true,
-    autoplayTimeout: 2000,
-    autoplayHoverPause: true,
     nav: false,
-    dots: true,
+    dots: false,
+    autoplayTimeout: 3000,
+    autoplaySpeed: 10000,
+    autoplayHoverPause: false,
+    smartSpeed: 10000,
+    slideTransition: "linear",
     responsive: {
       0: {
         items: 2,
@@ -182,6 +185,37 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   });
+
+  $(".client-carousel-reverse").owlCarousel({
+    margin: 0,
+    autoplay: true,
+    loop: true,
+    nav: false,
+    dots: false,
+    autoplayTimeout: 3000,
+    autoplaySpeed: 10000,
+    autoplayHoverPause: false,
+    smartSpeed: 10000,
+    slideTransition: "linear",
+    responsive: {
+      0: {
+        items: 2,
+      },
+      576: {
+        items: 3,
+      },
+      800: {
+        items: 4,
+      },
+      1200: {
+        items: 5,
+      },
+      1400: {
+        items: 6,
+      },
+    },
+  });
+
   $(".testimonial-carousel").owlCarousel({
     margin: 0,
     responsive: {

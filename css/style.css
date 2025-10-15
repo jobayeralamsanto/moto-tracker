@@ -2387,3 +2387,9 @@ body {
 .owl-theme .owl-dots .owl-dot:hover span {
   background: #15a86d;
 }
+/* .client-carousel-reverse {
+  direction: rtl;
+}
+.client-carousel-reverse .owl-item {
+  direction: ltr;
+} */
